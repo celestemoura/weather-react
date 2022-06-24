@@ -1,19 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Weather from "./Weather";
+import SearchEngine from "./SearchEngine";
+import "./styles.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Weather />
-      </header>
+      <h1>Weather App</h1>
+      <SearchEngine />
     </div>
   );
 }
-
-export default App;
