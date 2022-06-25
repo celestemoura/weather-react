@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Search.css";
 
-export default function SearchEngine() {
+export default function SearchFunction() {
   const [weather, setWeather] = useState(null);
   const [city, setCity] = useState(null);
   const [loaded, setLoaded] = useState(false);
-
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
@@ -18,30 +16,28 @@ export default function SearchEngine() {
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
-
   function handleSearch(event) {
     event.preventDefault();
     const apiKey = "d4e08a0b9b2ea184fab7dbd303ce7427";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
-
   function updateCity(event) {
     setCity(event.target.value);
   }
-
   let form = (
-    <form onSubmit={handleSearch}>
+    <form autoComplete="off" onSubmit={handleSearch}>
+      <i className="fa-solid fa-map-pin location-icon" id="location-icon"></i>
       <input
         type="text"
         placeholder="Enter a city"
         autoFocus="yes"
         onChange={updateCity}
+        className="search-field"
       />
-      <input type="submit" value="Search" />
+      <input type="submit" value="Search" className="search-button" />
     </form>
   );
-
   if (loaded) {
     return (
       <div className="Search">

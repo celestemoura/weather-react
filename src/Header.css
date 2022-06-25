@@ -1,0 +1,90 @@
+form {
+  text-align: left;
+}
+
+.celsius-fahrenheit {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.celsius-fahrenheit .active {
+  color: #9d53c3;
+  cursor: default;
+  font-size: 24px;
+}
+
+.location-icon {
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.location-icon:hover {
+  color: #9d53c3;
+  cursor: pointer;
+}
+
+.search-button {
+  background: linear-gradient(
+    109.6deg,
+    rgb(61, 237, 253) 44.2%,
+    rgb(3, 136, 238) 95.6%
+  );
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  padding: 5px;
+}
+
+.search-button:hover {
+  background: linear-gradient(
+    33.2deg,
+    rgb(157, 147, 247) 30.2%,
+    rgb(117, 176, 247) 61.4%
+  );
+  transition: all 1s ease-in-out;
+}
+
+.search-field {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.search-field:hover {
+  background: white;
+}
+
+@media (max-width: 576px) {
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .celsius-fahrenheit .active {
+    font-size: 20px;
+  }
+
+  .celsius-fahrenheit {
+    font-size: 14px;
+  }
+
+  .location-icon {
+    padding-right: 5px;
+  }
+
+  .search-button {
+    font-size: 10px;
+    margin-right: 3px;
+  }
+
+  .search-field {
+    font-size: 10px;
+    margin-right: 3px;
+    padding-right: 0;
+  }
+}

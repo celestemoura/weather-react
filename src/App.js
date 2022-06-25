@@ -1,24 +1,20 @@
-import SearchEngine from "./SearchEngine";
-import "./styles.css";
+import Header from "./Header";
+import CurrentLocation from "./CurrentLocation";
+import Today from "./Today";
+import Forecast from "./Forecast";
+import Footer from "./Footer";
+import "./App.css";
+import "./Header.css";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
-        <SearchEngine />
-        <br />
-        <small>
-          <a
-            href="https://github.com/celestemoura/weather-react"
-            title="GitHub repository"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Open source code
-          </a>{" "}
-          by Celeste Moura
-        </small>
+        <Header />
+        <CurrentLocation />
+        <Today />
+        <Forecast />
+        <Footer />
       </div>
     </div>
   );

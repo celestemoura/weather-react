@@ -1,0 +1,59 @@
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #9d53c3;
+}
+
+body {
+  font-family: "Cutive Mono", monospace;
+  font-size: 14px;
+}
+
+.Credits {
+  font-size: 10px;
+  left: -38px;
+  position: relative;
+  top: 75px;
+}
+
+.container {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(148, 241, 246) 0%,
+    rgb(148, 189, 246) 100.7%
+  );
+  border: 1px black solid;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  margin-top: 15px;
+  padding: 40px;
+  height: fit-content;
+}
+
+.forecast-icon {
+  width: 40px;
+}
+
+.weekly-forecast {
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .Credits {
+    top: 35px;
+  }
+
+  .weekly-forecast {
+    padding: 10px;
+  }
+}
