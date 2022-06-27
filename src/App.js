@@ -1,4 +1,3 @@
-import Header from "./Header";
 import CurrentWeather from "./CurrentWeather";
 import Forecast from "./Forecast";
 import "./App.css";
@@ -7,7 +6,6 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Header />
         <CurrentWeather defaultCity="Berlin" defaultCountryCode="DE" />
         <Forecast />
         <footer>

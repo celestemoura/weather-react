@@ -1,4 +1,4 @@
-form {
+.Header form {
   text-align: left;
 }
 
@@ -24,17 +24,17 @@ form {
   font-size: 24px;
 }
 
-.location-icon {
+.Header .location-icon {
   font-size: 20px;
   padding-right: 5px;
 }
 
-.location-icon:hover {
+.Header .location-icon:hover {
   color: #9d53c3;
   cursor: pointer;
 }
 
-.search-button {
+.Header .search-button {
   background: linear-gradient(
     109.6deg,
     rgb(61, 237, 253) 44.2%,
@@ -47,7 +47,7 @@ form {
   padding: 5px;
 }
 
-.search-button:hover {
+.Header .search-button:hover {
   background: linear-gradient(
     33.2deg,
     rgb(157, 147, 247) 30.2%,
@@ -56,7 +56,7 @@ form {
   transition: all 1s ease-in-out;
 }
 
-.search-field {
+.Header .search-field {
   background: transparent;
   border: 1px solid black;
   border-radius: 10px;
@@ -65,34 +65,34 @@ form {
   padding: 5px;
 }
 
-.search-field:hover {
+.Header .search-field:hover {
   background: white;
 }
 
 @media (max-width: 576px) {
-  form {
+  .Header form {
     display: flex;
     justify-content: space-between;
   }
 
-  .celsius-fahrenheit .active {
+  .Header .celsius-fahrenheit .active {
     font-size: 20px;
   }
 
-  .celsius-fahrenheit {
+  .Header .celsius-fahrenheit {
     font-size: 14px;
   }
 
-  .location-icon {
+  .Header .location-icon {
     padding-right: 5px;
   }
 
-  .search-button {
+  .Header .search-button {
     font-size: 10px;
     margin-right: 3px;
   }
 
-  .search-field {
+  .Header .search-field {
     font-size: 10px;
     margin-right: 3px;
     padding-right: 0;
