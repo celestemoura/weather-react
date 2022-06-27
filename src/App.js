@@ -1,20 +1,28 @@
 import Header from "./Header";
-import CurrentLocation from "./CurrentLocation";
-import Today from "./Today";
+import CurrentWeather from "./CurrentWeather";
 import Forecast from "./Forecast";
-import Footer from "./Footer";
 import "./App.css";
-import "./Header.css";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
         <Header />
-        <CurrentLocation />
-        <Today />
+        <CurrentWeather />
         <Forecast />
-        <Footer />
+        <footer>
+          <p>
+            <a
+              href="https://github.com/celestemoura/weather-react"
+              title="GitHub repository"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open source code{" "}
+            </a>
+            by Celeste Moura
+          </p>
+        </footer>
       </div>
     </div>
   );

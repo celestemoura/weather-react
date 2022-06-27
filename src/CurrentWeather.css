@@ -12,6 +12,15 @@ ul {
   top: -145px;
 }
 
+.current-location {
+  font-family: "Hubballi", cursive;
+  font-size: 40px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
 .current-temperature {
   font-family: "Hubballi", cursive;
   font-size: 100px;

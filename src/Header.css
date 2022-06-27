@@ -2,15 +2,25 @@ form {
   text-align: left;
 }
 
-.celsius-fahrenheit {
+.Header button {
+  background-color: transparent;
+  border: none;
+}
+
+.Header button:hover {
+  color: #9d53c3;
+  cursor: pointer;
+}
+
+.Header .celsius-fahrenheit {
   font-size: 18px;
   font-weight: bold;
   text-align: right;
 }
 
-.celsius-fahrenheit .active {
+.Header .celsius-fahrenheit .active {
   color: #9d53c3;
-  cursor: default;
+  /* cursor: default; */
   font-size: 24px;
 }
 

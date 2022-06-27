@@ -1,39 +1,21 @@
 import React from "react";
-import "./Header.css";
 import SearchFunction from "./SearchFunction";
+import "./Header.css";
 
 export default function Header() {
   return (
-    <div className="row">
+    <div className="row Header">
       <div className="col-8">
-        {/* <form autoComplete="off"> */}
-        {/* <i
-            className="fa-solid fa-map-pin location-icon"
-            id="location-icon"
-          ></i> */}
         <SearchFunction />
-        {/* <input
-            type="text"
-            placeholder="Enter city"
-            className="search-field"
-            id="city-input"
-          />
-          <input
-            type="submit"
-            value="Search"
-            className="search-button"
-            title="Search"
-          /> */}
-        {/* </form> */}
       </div>
       <div className="col-4 celsius-fahrenheit">
-        <a href="#" id="celsius-link" className="active" title="Celsius">
+        <button id="celsius-link" className="active" title="Celsius">
           °C
-        </a>
+        </button>
         |
-        <a href="#" title="Fahrenheit" id="fahrenheit-link">
+        <button title="Fahrenheit" id="fahrenheit-link">
           °F
-        </a>
+        </button>
       </div>
     </div>
   );
