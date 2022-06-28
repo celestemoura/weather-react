@@ -1,40 +1,40 @@
-.Header form {
+.Weather form {
   text-align: left;
 }
 
-.Header button {
+.Weather button {
   background-color: transparent;
   border: none;
 }
 
-.Header button:hover {
+.Weather button:hover {
   color: #9d53c3;
   cursor: pointer;
 }
 
-.Header .celsius-fahrenheit {
+.Weather .celsius-fahrenheit {
   font-size: 18px;
   font-weight: bold;
   text-align: right;
 }
 
-.Header .celsius-fahrenheit .active {
+.Weather .celsius-fahrenheit .active {
   color: #9d53c3;
   /* cursor: default; */
   font-size: 24px;
 }
 
-.Header .location-icon {
+.Weather .location-icon {
   font-size: 20px;
   padding-right: 5px;
 }
 
-.Header .location-icon:hover {
+.Weather .location-icon:hover {
   color: #9d53c3;
   cursor: pointer;
 }
 
-.Header .search-button {
+.Weather .search-button {
   background: linear-gradient(
     109.6deg,
     rgb(61, 237, 253) 44.2%,
@@ -47,7 +47,7 @@
   padding: 5px;
 }
 
-.Header .search-button:hover {
+.Weather .search-button:hover {
   background: linear-gradient(
     33.2deg,
     rgb(157, 147, 247) 30.2%,
@@ -56,7 +56,7 @@
   transition: all 1s ease-in-out;
 }
 
-.Header .search-field {
+.Weather .search-field {
   background: transparent;
   border: 1px solid black;
   border-radius: 10px;
@@ -65,34 +65,34 @@
   padding: 5px;
 }
 
-.Header .search-field:hover {
+.Weather .search-field:hover {
   background: white;
 }
 
 @media (max-width: 576px) {
-  .Header form {
+  .Weather form {
     display: flex;
     justify-content: space-between;
   }
 
-  .Header .celsius-fahrenheit .active {
+  .Weather .celsius-fahrenheit .active {
     font-size: 20px;
   }
 
-  .Header .celsius-fahrenheit {
+  .Weather .celsius-fahrenheit {
     font-size: 14px;
   }
 
-  .Header .location-icon {
+  .Weather .location-icon {
     padding-right: 5px;
   }
 
-  .Header .search-button {
+  .Weather .search-button {
     font-size: 10px;
     margin-right: 3px;
   }
 
-  .Header .search-field {
+  .Weather .search-field {
     font-size: 10px;
     margin-right: 3px;
     padding-right: 0;
