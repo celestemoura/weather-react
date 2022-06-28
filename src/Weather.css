@@ -2,25 +2,25 @@
   text-align: left;
 }
 
-.Weather button {
+.CurrentWeatherInfo button {
   background-color: transparent;
   border: none;
+  padding: 0px;
 }
 
-.Weather button:hover {
+.CurrentWeatherInfo button:hover {
   color: #9d53c3;
   cursor: pointer;
 }
 
-.Weather .celsius-fahrenheit {
+.CurrentWeatherInfo .celsius-fahrenheit {
   font-size: 18px;
   font-weight: bold;
   text-align: right;
 }
 
-.Weather .celsius-fahrenheit .active {
+.CurrentWeatherInfo .celsius-fahrenheit .active {
   color: #9d53c3;
-  /* cursor: default; */
   font-size: 24px;
 }
 
@@ -70,16 +70,11 @@
 }
 
 @media (max-width: 576px) {
-  .Weather form {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .Weather .celsius-fahrenheit .active {
+.CurrentWeatherInfo .celsius-fahrenheit .active {
     font-size: 20px;
   }
 
-  .Weather .celsius-fahrenheit {
+.CurrentWeatherInfo .celsius-fahrenheit {
     font-size: 14px;
   }
 

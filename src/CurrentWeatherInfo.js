@@ -22,6 +22,14 @@ export default function CurrentWeatherInfo(props) {
             <div className="current-temperature">
               {Math.round(props.data.temperature)}°
             </div>
+
+            <div className="celsius-fahrenheit">
+              <button className="active" title="Celsius">
+                °C
+              </button>
+              |<button title="Fahrenheit">°F</button>
+            </div>
+
             <div className="main-icon">
               <WeatherIcon code={props.data.icon} />
             </div>

@@ -53,7 +53,7 @@ export default function Weather(props) {
     return (
       <div>
         <div className="row Weather">
-          <div className="col-8">
+          <div className="col">
             <form autoComplete="off" onSubmit={handleSearch}>
               <i
                 className="fa-solid fa-map-pin location-icon"
@@ -69,12 +69,12 @@ export default function Weather(props) {
               <input type="submit" value="Search" className="search-button" />
             </form>
           </div>
-          <div className="col-4 celsius-fahrenheit">
+          {/* <div className="col-4 celsius-fahrenheit">
             <button className="active" title="Celsius">
               °C
             </button>
             |<button title="Fahrenheit">°F</button>
-          </div>
+          </div> */}
         </div>
         <CurrentWeatherInfo data={weather} />
       </div>
