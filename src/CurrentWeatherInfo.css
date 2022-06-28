@@ -6,10 +6,16 @@ ul {
   padding: 0px;
 }
 
+canvas {
+  position: relative;
+  right: 70px;
+  top: -40px;
+}
+
 .conditions {
   position: relative;
   right: -50px;
-  top: -145px;
+  top: -130px;
 }
 
 .current-location {
@@ -17,7 +23,6 @@ ul {
   font-size: 40px;
   letter-spacing: 1px;
   padding-top: 20px;
-  padding-bottom: 20px;
   text-align: left;
 }
 
@@ -27,13 +32,6 @@ ul {
   position: relative;
   text-align: center;
   top: -15px;
-}
-
-.main-icon {
-  width: 120px;
-  position: relative;
-  right: 70px;
-  top: -50px;
 }
 
 .today {

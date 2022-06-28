@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 import "./CurrentWeatherInfo.css";
 
 export default function CurrentWeatherInfo(props) {
@@ -7,36 +8,31 @@ export default function CurrentWeatherInfo(props) {
     <div className="CurrentWeatherInfo">
       <div className="row">
         <div className="col current-location">
-          <span id="city-country">
+          <span>
             {props.data.city}, {props.data.country}
           </span>
         </div>
       </div>
       <div className="row">
-        <div className="col today" id="today">
-          <span id="current-date">
+        <div className="col today">
+          <span>
             <FormattedDate date={props.data.date} />
           </span>
           <span>
-            <div className="current-temperature" id="current-temperature">
+            <div className="current-temperature">
               {Math.round(props.data.temperature)}°
             </div>
-            <img
-              alt="Weather Icon"
-              className="main-icon"
-              id="main-icon"
-              src={props.data.iconURL}
-            />
+            <div className="main-icon">
+              <WeatherIcon code={props.data.icon} />
+            </div>
             <ul className="conditions">
-              <li id="min-max">
+              <li>
                 {Math.round(props.data.minTemp)}°/
                 {Math.round(props.data.maxTemp)}°
               </li>
-              <li id="feels-like">
-                feels like {Math.round(props.data.feelsLike)}°
-              </li>
-              <li id="wind-speed">wind: {Math.round(props.data.wind)} km/h</li>
-              <li id="sky">{props.data.sky}</li>
+              <li>feels like {Math.round(props.data.feelsLike)}°</li>
+              <li>wind: {Math.round(props.data.wind)} km/h</li>
+              <li>{props.data.sky}</li>
             </ul>
           </span>
         </div>

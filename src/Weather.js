@@ -17,7 +17,7 @@ export default function Weather(props) {
       feelsLike: response.data.main.feels_like,
       sky: response.data.weather[0].description,
       wind: response.data.wind.speed,
-      iconURL: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       city: response.data.name,
       country: response.data.sys.country,
     });
@@ -57,7 +57,6 @@ export default function Weather(props) {
             <form autoComplete="off" onSubmit={handleSearch}>
               <i
                 className="fa-solid fa-map-pin location-icon"
-                id="location-icon"
                 onClick={findMe}
               ></i>
               <input
@@ -71,13 +70,10 @@ export default function Weather(props) {
             </form>
           </div>
           <div className="col-4 celsius-fahrenheit">
-            <button id="celsius-link" className="active" title="Celsius">
+            <button className="active" title="Celsius">
               °C
             </button>
-            |
-            <button title="Fahrenheit" id="fahrenheit-link">
-              °F
-            </button>
+            |<button title="Fahrenheit">°F</button>
           </div>
         </div>
         <CurrentWeatherInfo data={weather} />
