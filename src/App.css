@@ -12,7 +12,7 @@ body {
   font-size: 14px;
 }
 
-.App footer {
+footer {
   font-size: 10px;
   left: -38px;
   position: relative;
@@ -34,14 +34,14 @@ body {
   height: fit-content;
 }
 
-.forecast-icon {
+/* .forecast-icon {
   width: 40px;
-}
+} */
 
-.weekly-forecast {
+/* .weekly-forecast {
   font-size: 16px;
   text-align: center;
-}
+} */
 
 @media (max-width: 576px) {
   .container {
@@ -49,11 +49,11 @@ body {
     padding-bottom: 0px;
   }
 
-  .App footer {
+  footer {
     top: 35px;
   }
 
-  .weekly-forecast {
+  /* .weekly-forecast {
     padding: 10px;
-  }
+  } */
 }

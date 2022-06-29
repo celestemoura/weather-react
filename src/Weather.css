@@ -1,7 +1,4 @@
-.Weather form {
-  text-align: left;
-}
-
+/*.className="CurrentWeatherInfo*/
 .CurrentWeatherInfo button {
   background-color: transparent;
   border: none;
@@ -13,7 +10,25 @@
   cursor: pointer;
 }
 
+.CurrentWeatherInfo canvas {
+  position: relative;
+  right: 70px;
+  top: -30px;
+}
+
+.CurrentWeatherInfo li {
+  list-style: none;
+}
+
+.CurrentWeatherInfo ul {
+  padding: 0px;
+}
+
 .CurrentWeatherInfo .celsius-fahrenheit {
+  position: relative;
+  right: -465px;
+  top: -305px;
+  width: fit-content;
   font-size: 18px;
   font-weight: bold;
   text-align: right;
@@ -22,6 +37,41 @@
 .CurrentWeatherInfo .celsius-fahrenheit .active {
   color: #9d53c3;
   font-size: 24px;
+}
+
+.CurrentWeatherInfo .conditions {
+  position: relative;
+  right: -50px;
+  top: -120px;
+}
+
+.CurrentWeatherInfo .current-location {
+  font-family: "Hubballi", cursive;
+  font-size: 40px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.CurrentWeatherInfo .current-temperature {
+  font-family: "Hubballi", cursive;
+  font-size: 100px;
+  position: relative;
+  text-align: center;
+  top: -15px;
+}
+
+.CurrentWeatherInfo .today {
+  font-size: 14px;
+  padding: 0px;
+  position: relative;
+  text-align: center;
+  top: 20px;
+}
+
+/*.className="Weather*/
+.Weather form {
+  text-align: left;
 }
 
 .Weather .location-icon {
@@ -70,14 +120,17 @@
 }
 
 @media (max-width: 576px) {
-  .CurrentWeatherInfo .celsius-fahrenheit .active {
-    font-size: 20px;
-  }
-
+  /*.className="CurrentWeatherInfo*/
   .CurrentWeatherInfo .celsius-fahrenheit {
     font-size: 14px;
+    right: -250px;
   }
 
+  .CurrentWeatherInfo .today {
+    height: 270px;
+  }
+
+  /*.className="Weather*/
   .Weather .location-icon {
     padding-right: 5px;
   }
