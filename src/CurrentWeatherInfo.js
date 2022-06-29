@@ -18,24 +18,34 @@ export default function CurrentWeatherInfo(props) {
     setUnit("celsius");
   }
 
+  let twoFirstRows = (
+    <span>
+      <div className="row">
+        <div className="col current-location">
+          {props.data.city}, {props.data.country}
+        </div>
+      </div>
+      <div className="row">
+        <div className="col today">
+          <FormattedDate date={props.data.date} />
+        </div>
+      </div>
+    </span>
+  );
+
+  let weatherIconSnippet = (
+    <div className="col-6">
+      <span className="main-icon">
+        <WeatherIcon code={props.data.icon} />
+      </span>
+    </div>
+  );
+
   if (unit === "celsius") {
     return (
-      //Celsius display (Fahrenheit display below)
+      //Celsius display (Fahrenheit display follows)
       <div className="CurrentWeatherInfo">
-        <div className="row">
-          <div className="col current-location">
-            <span>
-              {props.data.city}, {props.data.country}
-            </span>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col today">
-            <span>
-              <FormattedDate date={props.data.date} />
-            </span>
-          </div>
-        </div>
+        {twoFirstRows}
         <div className="row">
           <div className="col-12 text-center">
             <span className="current-temperature">
@@ -53,11 +63,7 @@ export default function CurrentWeatherInfo(props) {
           </div>
         </div>
         <div className="row weather-details">
-          <div className="col-6">
-            <span className="main-icon">
-              <WeatherIcon code={props.data.icon} />
-            </span>
-          </div>
+          {weatherIconSnippet}
           <div className="col-6">
             <ul className="conditions">
               <li>
@@ -76,20 +82,7 @@ export default function CurrentWeatherInfo(props) {
     return (
       //Fahrenheit display
       <div className="CurrentWeatherInfo">
-        <div className="row">
-          <div className="col current-location">
-            <span>
-              {props.data.city}, {props.data.country}
-            </span>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col today">
-            <span>
-              <FormattedDate date={props.data.date} />
-            </span>
-          </div>
-        </div>
+        {twoFirstRows}
         <div className="row">
           <div className="col-12 text-center">
             <span className="current-temperature">
@@ -107,11 +100,7 @@ export default function CurrentWeatherInfo(props) {
           </div>
         </div>
         <div className="row weather-details">
-          <div className="col-6">
-            <span className="main-icon">
-              <WeatherIcon code={props.data.icon} />
-            </span>
-          </div>
+          {weatherIconSnippet}
           <div className="col-6">
             <ul className="conditions">
               <li>
