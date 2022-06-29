@@ -12,6 +12,13 @@ canvas {
   top: -30px;
 }
 
+.celsius-fahrenheit {
+  position: relative;
+  right: -465px;
+  top: -305px;
+  width: fit-content;
+}
+
 .conditions {
   position: relative;
   right: -50px;

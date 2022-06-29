@@ -70,11 +70,11 @@
 }
 
 @media (max-width: 576px) {
-.CurrentWeatherInfo .celsius-fahrenheit .active {
+  .CurrentWeatherInfo .celsius-fahrenheit .active {
     font-size: 20px;
   }
 
-.CurrentWeatherInfo .celsius-fahrenheit {
+  .CurrentWeatherInfo .celsius-fahrenheit {
     font-size: 14px;
   }
 
