@@ -34,32 +34,40 @@ export default function CurrentWeatherInfo(props) {
             <span>
               <FormattedDate date={props.data.date} />
             </span>
-            <span>
-              <div className="current-temperature">
-                {Math.round(props.data.temperature)}°
-              </div>
-              <div className="celsius-fahrenheit">
-                <button className="active" title="Celsius">
-                  °C
-                </button>
-                |
-                <button title="Fahrenheit" onClick={showFahrenheit}>
-                  °F
-                </button>
-              </div>
-              <div className="main-icon">
-                <WeatherIcon code={props.data.icon} />
-              </div>
-              <ul className="conditions">
-                <li>
-                  {Math.round(props.data.minTemp)}°/
-                  {Math.round(props.data.maxTemp)}°
-                </li>
-                <li>feels like {Math.round(props.data.feelsLike)}°</li>
-                <li>wind: {Math.round(props.data.windSpeed)} km/h</li>
-                <li>{props.data.skyConditions}</li>
-              </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 text-center">
+            <span className="current-temperature">
+              {Math.round(props.data.temperature)}
             </span>
+            <span className="unit-switch">
+              <button className="active" title="Celsius">
+                °C
+              </button>
+              |
+              <button title="Fahrenheit" onClick={showFahrenheit}>
+                °F
+              </button>
+            </span>
+          </div>
+        </div>
+        <div className="row weather-details">
+          <div className="col-6">
+            <span className="main-icon">
+              <WeatherIcon code={props.data.icon} />
+            </span>
+          </div>
+          <div className="col-6">
+            <ul className="conditions">
+              <li>
+                {Math.round(props.data.minTemp)}°/
+                {Math.round(props.data.maxTemp)}°
+              </li>
+              <li>feels like {Math.round(props.data.feelsLike)}°</li>
+              <li>wind: {Math.round(props.data.windSpeed)} km/h</li>
+              <li>{props.data.skyConditions}</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -80,32 +88,40 @@ export default function CurrentWeatherInfo(props) {
             <span>
               <FormattedDate date={props.data.date} />
             </span>
-            <span>
-              <div className="current-temperature">
-                {Math.round(fahrenheitTemperature)}°
-              </div>
-              <div className="celsius-fahrenheit">
-                <button title="Celsius" onClick={showCelsius}>
-                  °C
-                </button>
-                |
-                <button title="Fahrenheit" className="active">
-                  °F
-                </button>
-              </div>
-              <div className="main-icon">
-                <WeatherIcon code={props.data.icon} />
-              </div>
-              <ul className="conditions">
-                <li>
-                  {Math.round(minFahrenheitTemperature)}°/
-                  {Math.round(maxFahrenheitTemperature)}°
-                </li>
-                <li>feels like {Math.round(feelsLikeFahrenheit)}°</li>
-                <li>wind: {Math.round(props.data.windSpeed)} km/h</li>
-                <li>{props.data.skyConditions}</li>
-              </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12 text-center">
+            <span className="current-temperature">
+              {Math.round(fahrenheitTemperature)}
             </span>
+            <span className="unit-switch">
+              <button title="Celsius" onClick={showCelsius}>
+                °C
+              </button>
+              |
+              <button className="active" title="Fahrenheit">
+                °F
+              </button>
+            </span>
+          </div>
+        </div>
+        <div className="row weather-details">
+          <div className="col-6">
+            <span className="main-icon">
+              <WeatherIcon code={props.data.icon} />
+            </span>
+          </div>
+          <div className="col-6">
+            <ul className="conditions">
+              <li>
+                {Math.round(minFahrenheitTemperature)}°/
+                {Math.round(maxFahrenheitTemperature)}°
+              </li>
+              <li>feels like {Math.round(feelsLikeFahrenheit)}°</li>
+              <li>wind: {Math.round(props.data.windSpeed)} km/h</li>
+              <li>{props.data.skyConditions}</li>
+            </ul>
           </div>
         </div>
       </div>

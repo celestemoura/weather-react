@@ -69,18 +69,12 @@ export default function Weather(props) {
               <input type="submit" value="Search" className="search-button" />
             </form>
           </div>
-          {/* <div className="col-4 celsius-fahrenheit">
-            <button className="active" title="Celsius">
-              °C
-            </button>
-            |<button title="Fahrenheit">°F</button>
-          </div> */}
         </div>
         <CurrentWeatherInfo data={weather} />
       </div>
     );
   } else {
     search();
-    return "Loading";
+    return "Loading...";
   }
 }

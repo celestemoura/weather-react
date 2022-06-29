@@ -11,9 +11,9 @@
 }
 
 .CurrentWeatherInfo canvas {
+  left: 150px;
   position: relative;
-  right: 70px;
-  top: -30px;
+  top: 0px;
 }
 
 .CurrentWeatherInfo li {
@@ -24,25 +24,25 @@
   padding: 0px;
 }
 
-.CurrentWeatherInfo .celsius-fahrenheit {
+.CurrentWeatherInfo .unit-switch {
+  font-size: 16px;
+  font-weight: bolder;
   position: relative;
-  right: -465px;
-  top: -305px;
-  width: fit-content;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: right;
+  top: -40px;
 }
 
-.CurrentWeatherInfo .celsius-fahrenheit .active {
+.CurrentWeatherInfo .unit-switch .active {
   color: #9d53c3;
   font-size: 24px;
+  font-weight: bold;
 }
 
 .CurrentWeatherInfo .conditions {
+  left: -20px;
   position: relative;
-  right: -50px;
-  top: -120px;
+  text-align: center;
+  top: 0px;
+  width: fit-content;
 }
 
 .CurrentWeatherInfo .current-location {
@@ -56,9 +56,7 @@
 .CurrentWeatherInfo .current-temperature {
   font-family: "Hubballi", cursive;
   font-size: 100px;
-  position: relative;
   text-align: center;
-  top: -15px;
 }
 
 .CurrentWeatherInfo .today {
@@ -67,6 +65,11 @@
   position: relative;
   text-align: center;
   top: 20px;
+}
+
+.CurrentWeatherInfo .weather-details {
+  position: relative;
+  top: -15px;
 }
 
 /*.className="Weather*/
@@ -121,13 +124,16 @@
 
 @media (max-width: 576px) {
   /*.className="CurrentWeatherInfo*/
-  .CurrentWeatherInfo .celsius-fahrenheit {
+  .CurrentWeatherInfo .unit-switch {
     font-size: 14px;
-    right: -250px;
   }
 
-  .CurrentWeatherInfo .today {
-    height: 270px;
+  .CurrentWeatherInfo .unit-switch .active {
+    font-size: 20px;
+  }
+
+  .CurrentWeatherInfo canvas {
+    left: 40px;
   }
 
   /*.className="Weather*/
