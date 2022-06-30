@@ -5,8 +5,6 @@ import "./Weather.css";
 
 export default function CurrentWeatherInfo(props) {
   let fahrenheitTemperature = (props.data.temperature * 9) / 5 + 32;
-  let minFahrenheitTemperature = (props.data.minTemp * 9) / 5 + 32;
-  let maxFahrenheitTemperature = (props.data.maxTemp * 9) / 5 + 32;
   let feelsLikeFahrenheit = (props.data.feelsLike * 9) / 5 + 32;
   const [unit, setUnit] = useState("celsius");
 
@@ -36,9 +34,17 @@ export default function CurrentWeatherInfo(props) {
   let weatherIconSnippet = (
     <div className="col-6">
       <span className="main-icon">
-        <WeatherIcon code={props.data.icon} />
+        <WeatherIcon code={props.data.icon} size={80} />
       </span>
     </div>
+  );
+
+  let skyWindHumidity = (
+    <span>
+      <li>{props.data.skyConditions}</li>
+      <li>wind: {Math.round(props.data.windSpeed)} km/h</li>
+      <li>humidity: {props.data.humidity}%</li>
+    </span>
   );
 
   if (unit === "celsius") {
@@ -66,13 +72,8 @@ export default function CurrentWeatherInfo(props) {
           {weatherIconSnippet}
           <div className="col-6">
             <ul className="conditions">
-              <li>
-                {Math.round(props.data.minTemp)}°/
-                {Math.round(props.data.maxTemp)}°
-              </li>
               <li>feels like {Math.round(props.data.feelsLike)}°</li>
-              <li>wind: {Math.round(props.data.windSpeed)} km/h</li>
-              <li>{props.data.skyConditions}</li>
+              {skyWindHumidity}
             </ul>
           </div>
         </div>
@@ -103,13 +104,8 @@ export default function CurrentWeatherInfo(props) {
           {weatherIconSnippet}
           <div className="col-6">
             <ul className="conditions">
-              <li>
-                {Math.round(minFahrenheitTemperature)}°/
-                {Math.round(maxFahrenheitTemperature)}°
-              </li>
               <li>feels like {Math.round(feelsLikeFahrenheit)}°</li>
-              <li>wind: {Math.round(props.data.windSpeed)} km/h</li>
-              <li>{props.data.skyConditions}</li>
+              {skyWindHumidity}
             </ul>
           </div>
         </div>

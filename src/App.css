@@ -34,15 +34,6 @@ footer {
   height: fit-content;
 }
 
-/* .forecast-icon {
-  width: 40px;
-} */
-
-/* .weekly-forecast {
-  font-size: 16px;
-  text-align: center;
-} */
-
 @media (max-width: 576px) {
   .container {
     margin-bottom: 0px;
@@ -52,8 +43,4 @@ footer {
   footer {
     top: 35px;
   }
-
-  /* .weekly-forecast {
-    padding: 10px;
-  } */
 }

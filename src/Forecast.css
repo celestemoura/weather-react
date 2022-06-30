@@ -1,0 +1,21 @@
+.ForecastIcon {
+  padding: 5px;
+}
+
+.Forecast {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.MaxTempForecast {
+  font-weight: bolder;
+  margin-left: 5px;
+}
+
+.MinTempForecast {
+  opacity: 0.5;
+}
+
+.ForecastDay {
+  text-align: center;
+}

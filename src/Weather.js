@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Weather.css";
+import Forecast from "./Forecast";
 import CurrentWeatherInfo from "./CurrentWeatherInfo";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -9,17 +10,18 @@ export default function Weather(props) {
 
   function displayWeather(response) {
     setWeather({
-      ready: true,
-      temperature: response.data.main.temp,
-      date: new Date(response.data.dt * 1000),
-      minTemp: response.data.main.temp_min,
-      maxTemp: response.data.main.temp_max,
-      feelsLike: response.data.main.feels_like,
-      skyConditions: response.data.weather[0].description,
-      windSpeed: response.data.wind.speed,
-      icon: response.data.weather[0].icon,
       city: response.data.name,
+      coordinates: response.data.coord,
       country: response.data.sys.country,
+      date: new Date(response.data.dt * 1000),
+      feelsLike: response.data.main.feels_like,
+      humidity: response.data.main.humidity,
+      icon: response.data.weather[0].icon,
+      skyConditions: response.data.weather[0].description,
+      temperature: response.data.main.temp,
+      windSpeed: response.data.wind.speed,
+      //set to ready: true
+      ready: true,
     });
   }
 
@@ -77,6 +79,7 @@ export default function Weather(props) {
           </div>
         </div>
         <CurrentWeatherInfo data={weather} />
+        <Forecast coordinates={weather.coordinates} />
       </div>
     );
   } else {
