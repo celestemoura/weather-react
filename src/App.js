@@ -1,7 +1,13 @@
 import Weather from "./Weather";
+// import create from "zustand/react";
 import "./App.css";
 
 export default function App() {
+  // const unitStore = create((set) => ({
+  //   units: 2,
+  //   changeUnit: () => set((state) => ({units: state.units}))
+  // }))
+
   return (
     <div className="App">
       <div className="container">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import Forecast from "./Forecast";
 import "./Weather.css";
 
 export default function CurrentWeatherInfo(props) {
@@ -47,6 +48,10 @@ export default function CurrentWeatherInfo(props) {
     </span>
   );
 
+  let forecastComponent = (
+    <Forecast coordinates={props.data.coordinates} unit={unit} />
+  );
+
   if (unit === "celsius") {
     return (
       //Celsius display (Fahrenheit display follows)
@@ -77,6 +82,7 @@ export default function CurrentWeatherInfo(props) {
             </ul>
           </div>
         </div>
+        {forecastComponent}
       </div>
     );
   } else {
@@ -109,6 +115,7 @@ export default function CurrentWeatherInfo(props) {
             </ul>
           </div>
         </div>
+        {forecastComponent}
       </div>
     );
   }

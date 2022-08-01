@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.CurrentWeatherInfo canvas {
+.CurrentWeatherInfo .main-icon {
   left: 150px;
   position: relative;
   top: 0px;
