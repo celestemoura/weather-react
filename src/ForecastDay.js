@@ -49,6 +49,7 @@ export default function ForecastDay(props) {
       </div>
     );
   } else {
+    //if  (props.unit === "fahrenheit")
     return (
       <div>
         <div className="WeekDay">{day()}</div>

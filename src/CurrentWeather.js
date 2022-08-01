@@ -4,7 +4,7 @@ import WeatherIcon from "./WeatherIcon";
 import Forecast from "./Forecast";
 import "./Weather.css";
 
-export default function CurrentWeatherInfo(props) {
+export default function CurrentWeather(props) {
   let fahrenheitTemperature = (props.data.temperature * 9) / 5 + 32;
   let feelsLikeFahrenheit = (props.data.feelsLike * 9) / 5 + 32;
   const [unit, setUnit] = useState("celsius");
@@ -55,7 +55,7 @@ export default function CurrentWeatherInfo(props) {
   if (unit === "celsius") {
     return (
       //Celsius display (Fahrenheit display follows)
-      <div className="CurrentWeatherInfo">
+      <div className="CurrentWeather">
         {twoFirstRows}
         <div className="row">
           <div className="col-12 text-center">
@@ -88,7 +88,7 @@ export default function CurrentWeatherInfo(props) {
   } else {
     return (
       //Fahrenheit display
-      <div className="CurrentWeatherInfo">
+      <div className="CurrentWeather">
         {twoFirstRows}
         <div className="row">
           <div className="col-12 text-center">

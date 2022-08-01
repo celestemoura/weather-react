@@ -27,20 +27,18 @@ footer {
   );
   border: 1px black solid;
   border-radius: 10px;
-  max-width: 600px;
-  margin-bottom: 40px;
-  margin-top: 15px;
-  padding: 40px;
   height: fit-content;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 40px;
 }
 
 @media (max-width: 576px) {
   .container {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 40px;
   }
 
   footer {
-    top: 35px;
+    top: 75px;
   }
 }

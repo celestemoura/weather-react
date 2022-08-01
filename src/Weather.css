@@ -1,43 +1,24 @@
-/*.className="CurrentWeatherInfo*/
-.CurrentWeatherInfo button {
+/*.className="CurrentWeather*/
+.CurrentWeather button {
   background-color: transparent;
   border: none;
   padding: 0px;
 }
 
-.CurrentWeatherInfo button:hover {
+.CurrentWeather button:hover {
   color: #9d53c3;
   cursor: pointer;
 }
 
-.CurrentWeatherInfo .main-icon {
-  left: 150px;
-  position: relative;
-  top: 0px;
-}
-
-.CurrentWeatherInfo li {
+.CurrentWeather li {
   list-style: none;
 }
 
-.CurrentWeatherInfo ul {
+.CurrentWeather ul {
   padding: 0px;
 }
 
-.CurrentWeatherInfo .unit-switch {
-  font-size: 16px;
-  font-weight: bolder;
-  position: relative;
-  top: -40px;
-}
-
-.CurrentWeatherInfo .unit-switch .active {
-  color: #9d53c3;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.CurrentWeatherInfo .conditions {
+.CurrentWeather .conditions {
   left: -20px;
   position: relative;
   text-align: center;
@@ -45,7 +26,7 @@
   width: fit-content;
 }
 
-.CurrentWeatherInfo .current-location {
+.CurrentWeather .current-location {
   font-family: "Hubballi", cursive;
   font-size: 40px;
   letter-spacing: 1px;
@@ -53,13 +34,19 @@
   text-align: left;
 }
 
-.CurrentWeatherInfo .current-temperature {
+.CurrentWeather .current-temperature {
   font-family: "Hubballi", cursive;
   font-size: 100px;
   text-align: center;
 }
 
-.CurrentWeatherInfo .today {
+.CurrentWeather .main-icon {
+  left: 150px;
+  position: relative;
+  top: 0px;
+}
+
+.CurrentWeather .today {
   font-size: 14px;
   padding: 0px;
   position: relative;
@@ -67,7 +54,20 @@
   top: 20px;
 }
 
-.CurrentWeatherInfo .weather-details {
+.CurrentWeather .unit-switch {
+  font-size: 16px;
+  font-weight: bolder;
+  position: relative;
+  top: -40px;
+}
+
+.CurrentWeather .unit-switch .active {
+  color: #9d53c3;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.CurrentWeather .weather-details {
   position: relative;
   top: -15px;
 }
@@ -123,17 +123,17 @@
 }
 
 @media (max-width: 576px) {
-  /*.className="CurrentWeatherInfo*/
-  .CurrentWeatherInfo .unit-switch {
+  /*.className="CurrentWeather*/
+   .CurrentWeather .main-icon {
+    left: 40px;
+  }
+  
+  .CurrentWeather .unit-switch {
     font-size: 14px;
   }
 
-  .CurrentWeatherInfo .unit-switch .active {
+  .CurrentWeather .unit-switch .active {
     font-size: 20px;
-  }
-
-  .CurrentWeatherInfo canvas {
-    left: 40px;
   }
 
   /*.className="Weather*/
